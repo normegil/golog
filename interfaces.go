@@ -1,4 +1,4 @@
-package log
+package golog
 
 type SimpleLogger interface {
 	Print(string)
