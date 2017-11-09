@@ -1,9 +1,9 @@
 package log
 
-type SimpleLogger interface {
-	Printf(string, ...interface{})
-}
-
 type VoidLogger struct{}
 
-func (v VoidLogger) Printf(string, ...interface{}) {}
+func (v VoidLogger) Print(string) {}
+
+func (v VoidLogger) WithField(key string, object interface{}) StructuredLogger {
+	return v
+}
